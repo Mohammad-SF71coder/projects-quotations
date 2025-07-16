@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects Quotations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Samer kasida for Wooden Decoration</h1>
+    <div class="table-container">
+        <table>
+            <tr>
+                <th>Category</th>
+                <th>QYT</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+            <!-- <tr class="elements">
+                <td><input type="text"   class="Category" placeholder="Category"></td>
+                <td><input type="number" class="qyt" placeholder="QYT"></td>
+                <td><input type="number" class="price" placeholder="Price"></td>
+                <td><input type="number" class="total" id="total" placeholder="Total" disabled></td>
+            </tr> -->
+            
+        </table>
+        <p class="total-price" id="total-price">Total Price: </p>
+        <button class="btn" id="btn">Add</button>
+        <button onclick="exportPDF()" type="submit" class="done" id="done">Done</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
