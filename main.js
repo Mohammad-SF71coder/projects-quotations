@@ -6,6 +6,9 @@ const inputTypes = ["text", "number", "number", "number"];
 const disabledAt = [false, false, false, true];
 const placeholderAt = ["Category", "QYT", "Price", "Total"];
 
+const doneEl = ducument.getElementById("done")
+
+
 addEl.addEventListener("click", () => {
     const newTrEl = document.createElement("tr");
     const inputs = [];
@@ -56,6 +59,12 @@ function totalPriceCalcuate(){
     console.log(totalSum)
 };
 
+
+doneEl.addEventListener("submit", ()=>{
+    addEl.style.display = "none";
+    doneEl.style.display = "none";
+    setTimeout(exportPDF,2000)
+})
 
 
 
