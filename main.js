@@ -6,7 +6,7 @@ const inputTypes = ["text", "number", "number", "number"];
 const disabledAt = [false, false, false, true];
 const placeholderAt = ["Category", "QYT", "Price", "Total"];
 
-const doneEl = ducument.getElementById("done")
+const doneEl = document.getElementById("done")
 
 
 addEl.addEventListener("click", () => {
