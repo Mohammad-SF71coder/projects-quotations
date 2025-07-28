@@ -1,12 +1,43 @@
-
 const addEl = document.getElementById("btn");
 const totalPriceEl = document.getElementById("total-price");
 const tableEl = document.querySelector("table");
 const inputTypes = ["text", "number", "number", "number"];
 const disabledAt = [false, false, false, true];
 const placeholderAt = ["Category", "QYT", "Price", "Total"];
-
 const doneEl = document.getElementById("done")
+
+security()
+function security(){
+    const securityContainer = document.querySelector(".security");
+    const userName = document.getElementById("user-name");
+    const password = document.getElementById("password");
+    const safeBtn = document.getElementById("safe");
+
+    userName.addEventListener("input", ()=>{
+        password.addEventListener("input", ()=>{
+            safeBtn.addEventListener("click", ()=>{
+                if(userName.value === "samer" || userName.value === "سامر قصيدة" && password.value === "441977"){
+                    securityContainer.style.top = "-300px";
+                    securityContainer.style.transition = "all 1s ease";
+                }else{
+                    userName.placeholder = "user name and password is not currect";
+                    password.placeholder = "user name and password is not currect";
+                    userName.value = "";
+                    password.value = ""
+                }
+            })
+        })
+    })
+
+    
+}
+
+
+
+
+
+
+
 
 
 addEl.addEventListener("click", () => {
@@ -60,11 +91,15 @@ function totalPriceCalcuate(){
 };
 
 
-doneEl.addEventListener("click", ()=>{
-    addEl.style.display = "none";
-    doneEl.style.display = "none";
-    setTimeout(exportPDF,2000)
+window.addEventListener("DOMContentLoaded", ()=>{
+    doneEl.addEventListener("click", ()=>{
+        addEl.style.display = "none";
+        doneEl.style.display = "none";
+        setTimeout(exportPDF,50)
+    })
+
 })
+
 
 
 

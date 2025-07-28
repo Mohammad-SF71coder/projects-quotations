@@ -6,6 +6,7 @@ body{
     align-items: center;
     font-family:sans-serif;
     text-align: center;
+    position: relative;
 }
 
 .table-container{
@@ -59,15 +60,60 @@ input{
     font-size: 18px;
 }
 
+input[type = "number"]{
+    text-align: center;
+}
 
-@media (max-width:668px) {
+.security{
+    position: absolute;
+    background-color: #0047AB;
+    width: 500px;
+    border-radius: 10px;
+    top: 150px;
+}
+
+.security #title{
+    color: aliceblue;
+    font-size: 25px;
+    margin-top: 30px;
+    text-decoration: none;
+}
+
+.security .security-inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.security-inputs input{
+    width: 85%;
+    height: 30px;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding-left:10px ;
+}
+
+
+
+
+
+
+
+
+@media (max-width:800px) {
     input{
-        width: 90%;
+        width: 95%;
         font-size: 18px;
     }
 
     button{
         width: 20%;
         font-size: 18px;
+    }
+
+    .security{
+        width: 400px;
     }
 }
