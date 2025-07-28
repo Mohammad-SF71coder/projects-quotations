@@ -60,7 +60,7 @@ function totalPriceCalcuate(){
 };
 
 
-doneEl.addEventListener("submit", ()=>{
+doneEl.addEventListener("click", ()=>{
     addEl.style.display = "none";
     doneEl.style.display = "none";
     setTimeout(exportPDF,2000)
